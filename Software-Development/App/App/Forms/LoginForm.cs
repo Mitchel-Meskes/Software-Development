@@ -15,22 +15,22 @@ namespace App.Forms
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            // Retrieve the username and password from the textboxes
+            // Verkrijg de gebruikersnaam en wachtwoord uit de tekstvakken
             string username = txtUsername.Text;
             string password = txtPassword.Text;
 
-            // Check if both username and password are entered
+            // Controleer of zowel gebruikersnaam als wachtwoord zijn ingevoerd
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
                 MessageBox.Show("Please enter both username and password.");
                 return;
             }
 
-            // Load the list of users
+            // Laad de lijst met gebruikers
             var users = UserService.LoadUsers();
             string hash = UserService.HashPassword(password);
 
-            // Check if the user exists with the provided credentials
+            // Zoek naar de gebruiker met de opgegeven gegevens
             var user = users.Find(u => u.Username == username && u.PasswordHash == hash);
             if (user == null)
             {
@@ -41,7 +41,20 @@ namespace App.Forms
 
             Logger.Info($"Login successful for {username}");
 
-            // Load settings and open the MainForm
+            // Laad de game-statistieken voor de ingelogde gebruiker
+            GameStatsService gameStatsService = new GameStatsService();
+            GameStats userStats = gameStatsService.GetGameStatsByUsername(username);
+
+            if (userStats != null)
+            {
+                MessageBox.Show($"Game Stats for {username}:\nCompleted Puzzles: {userStats.CompletedPuzzles}\nTotal Play Time: {userStats.TotalPlayTimeMinutes} minutes");
+            }
+            else
+            {
+                MessageBox.Show("No game stats found for this user.");
+            }
+
+            // Laad instellingen en open het MainForm
             Settings settings = SettingsManager.LoadSettings();
             MainForm mainForm = new MainForm(username, settings);
             mainForm.Show();
@@ -66,11 +79,8 @@ namespace App.Forms
                 return;
             }
 
-            var newUser = new User
-            {
-                Username = username,
-                PasswordHash = UserService.HashPassword(password)
-            };
+            // ✅ Gebruik nu de constructor van User correct
+            var newUser = new User(username, UserService.HashPassword(password));
 
             users.Add(newUser);
             UserService.SaveUsers(users);

@@ -11,9 +11,7 @@
 
 	<ProjectExtensions>
 		<VisualStudio>
-			<UserProperties
-			  rescources_4settings_1json__JsonSchema="https://alec016.github.io/Custom-Machinery/Json%20Schema/src/main/resources/schemas/custom_machinery_machine.json"
-      />
+			<UserProperties rescources_4settings_1json__JsonSchema="https://alec016.github.io/Custom-Machinery/Json%20Schema/src/main/resources/schemas/custom_machinery_machine.json" />
 		</VisualStudio>
 	</ProjectExtensions>
 

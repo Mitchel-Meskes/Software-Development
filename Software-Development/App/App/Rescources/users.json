@@ -1,0 +1,10 @@
+[
+    {
+        "Username": "player1",
+        "PasswordHash": "hashedpassword123"
+    },
+    {
+        "Username": "player2",
+        "PasswordHash": "hashedpassword456"
+    }
+]

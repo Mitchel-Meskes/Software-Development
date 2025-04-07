@@ -1,26 +1,62 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\admin\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\",
+  "WorkspaceRootPath": "C:\\Users\\admin\\Documents\\GitHub\\Software-Development\\Software-Development\\App\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|c:\\users\\admin\\source\\repos\\mitchel-meskes\\software-development\\software-development\\app\\app\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|solutionrelative:app\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|c:\\users\\admin\\source\\repos\\mitchel-meskes\\software-development\\software-development\\app\\app\\app.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|c:\\users\\admin\\documents\\github\\software-development\\software-development\\app\\app\\app.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|solutionrelative:app\\app.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|c:\\users\\admin\\source\\repos\\mitchel-meskes\\software-development\\software-development\\app\\app\\forms\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|solutionrelative:app\\forms\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|c:\\users\\admin\\documents\\github\\software-development\\software-development\\app\\app\\forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|solutionrelative:app\\forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|c:\\users\\admin\\source\\repos\\mitchel-meskes\\software-development\\software-development\\app\\app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|c:\\users\\admin\\documents\\github\\software-development\\software-development\\app\\app\\models\\nonogrampuzzle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|solutionrelative:app\\models\\nonogrampuzzle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|c:\\users\\admin\\documents\\github\\software-development\\software-development\\app\\app\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|solutionrelative:app\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|c:\\users\\admin\\documents\\github\\software-development\\software-development\\app\\app\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|solutionrelative:app\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|c:\\users\\admin\\documents\\github\\software-development\\software-development\\app\\app\\forms\\loginform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|solutionrelative:app\\forms\\loginform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|c:\\users\\admin\\documents\\github\\software-development\\software-development\\app\\app\\forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|solutionrelative:app\\forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|c:\\users\\admin\\documents\\github\\software-development\\software-development\\app\\app\\services\\settingsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|solutionrelative:app\\services\\settingsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|c:\\users\\admin\\documents\\github\\software-development\\software-development\\app\\app\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|solutionrelative:app\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|c:\\users\\admin\\documents\\github\\software-development\\software-development\\app\\app\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|solutionrelative:app\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|c:\\users\\admin\\documents\\github\\software-development\\software-development\\app\\app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|solutionrelative:app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|c:\\users\\admin\\source\\repos\\mitchel-meskes\\software-development\\software-development\\app\\app\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|solutionrelative:app\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|c:\\users\\admin\\documents\\github\\software-development\\software-development\\app\\app\\services\\gamestatsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|solutionrelative:app\\services\\gamestatsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|c:\\users\\admin\\documents\\github\\software-development\\software-development\\app\\app\\models\\gamestats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|solutionrelative:app\\models\\gamestats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|c:\\users\\admin\\documents\\github\\software-development\\software-development\\app\\app\\forms\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|solutionrelative:app\\forms\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,28 +66,144 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\Program.cs",
-              "RelativeDocumentMoniker": "App\\Program.cs",
-              "ToolTip": "C:\\Users\\admin\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\Program.cs",
-              "RelativeToolTip": "App\\Program.cs",
+              "DocumentIndex": 1,
+              "Title": "LoginForm.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Software-Development\\Software-Development\\App\\App\\Forms\\LoginForm.cs",
+              "RelativeDocumentMoniker": "App\\Forms\\LoginForm.cs",
+              "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\Software-Development\\Software-Development\\App\\App\\Forms\\LoginForm.cs",
+              "RelativeToolTip": "App\\Forms\\LoginForm.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAiwF0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T19:37:27.64Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LoginForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Software-Development\\Software-Development\\App\\App\\Forms\\LoginForm.Designer.cs",
+              "RelativeDocumentMoniker": "App\\Forms\\LoginForm.Designer.cs",
+              "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\Software-Development\\Software-Development\\App\\App\\Forms\\LoginForm.Designer.cs",
+              "RelativeToolTip": "App\\Forms\\LoginForm.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T19:37:19.323Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SettingsManager.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Software-Development\\Software-Development\\App\\App\\Services\\SettingsManager.cs",
+              "RelativeDocumentMoniker": "App\\Services\\SettingsManager.cs",
+              "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\Software-Development\\Software-Development\\App\\App\\Services\\SettingsManager.cs",
+              "RelativeToolTip": "App\\Services\\SettingsManager.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAcwDAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T19:36:41.786Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "NonogramPuzzle.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Software-Development\\Software-Development\\App\\App\\Models\\NonogramPuzzle.cs",
+              "RelativeDocumentMoniker": "App\\Models\\NonogramPuzzle.cs",
+              "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\Software-Development\\Software-Development\\App\\App\\Models\\NonogramPuzzle.cs",
+              "RelativeToolTip": "App\\Models\\NonogramPuzzle.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAiwEkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T19:28:11.849Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Software-Development\\Software-Development\\App\\App\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "App\\Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\Software-Development\\Software-Development\\App\\App\\Services\\UserService.cs",
+              "RelativeToolTip": "App\\Services\\UserService.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAuwCMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T19:27:33.385Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Software-Development\\Software-Development\\App\\App\\Models\\User.cs",
+              "RelativeDocumentMoniker": "App\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\Software-Development\\Software-Development\\App\\App\\Models\\User.cs",
+              "RelativeToolTip": "App\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T19:24:18.938Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "GameStatsService.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Software-Development\\Software-Development\\App\\App\\Services\\GameStatsService.cs",
+              "RelativeDocumentMoniker": "App\\Services\\GameStatsService.cs",
+              "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\Software-Development\\Software-Development\\App\\App\\Services\\GameStatsService.cs",
+              "RelativeToolTip": "App\\Services\\GameStatsService.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAuwCsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T19:15:22.106Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "GameStats.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Software-Development\\Software-Development\\App\\App\\Models\\GameStats.cs",
+              "RelativeDocumentMoniker": "App\\Models\\GameStats.cs",
+              "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\Software-Development\\Software-Development\\App\\App\\Models\\GameStats.cs",
+              "RelativeToolTip": "App\\Models\\GameStats.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAiwBEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T19:15:19.607Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LoginForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Software-Development\\Software-Development\\App\\App\\Forms\\LoginForm.cs",
+              "RelativeDocumentMoniker": "App\\Forms\\LoginForm.cs",
+              "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\Software-Development\\Software-Development\\App\\App\\Forms\\LoginForm.cs [Design]",
+              "RelativeToolTip": "App\\Forms\\LoginForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T19:12:42.01Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Software-Development\\Software-Development\\App\\App\\Program.cs",
+              "RelativeDocumentMoniker": "App\\Program.cs",
+              "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\Software-Development\\Software-Development\\App\\App\\Program.cs",
+              "RelativeToolTip": "App\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-06T12:22:47.056Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "MainForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\Forms\\MainForm.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Software-Development\\Software-Development\\App\\App\\Forms\\MainForm.cs",
               "RelativeDocumentMoniker": "App\\Forms\\MainForm.cs",
-              "ToolTip": "C:\\Users\\admin\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\Forms\\MainForm.cs [Design]",
+              "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\Software-Development\\Software-Development\\App\\App\\Forms\\MainForm.cs [Design]",
               "RelativeToolTip": "App\\Forms\\MainForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-06T07:02:22.397Z",
@@ -59,11 +211,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "App.csproj",
-              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\App.csproj",
+              "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Software-Development\\Software-Development\\App\\App\\App.csproj",
               "RelativeDocumentMoniker": "App\\App.csproj",
-              "ToolTip": "C:\\Users\\admin\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\App.csproj",
+              "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\Software-Development\\Software-Development\\App\\App\\App.csproj",
               "RelativeToolTip": "App\\App.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
@@ -72,11 +224,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 13,
               "Title": "MainForm.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\Forms\\MainForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Software-Development\\Software-Development\\App\\App\\Forms\\MainForm.Designer.cs",
               "RelativeDocumentMoniker": "App\\Forms\\MainForm.Designer.cs",
-              "ToolTip": "C:\\Users\\admin\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\Forms\\MainForm.Designer.cs",
+              "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\Software-Development\\Software-Development\\App\\App\\Forms\\MainForm.Designer.cs",
               "RelativeToolTip": "App\\Forms\\MainForm.Designer.cs",
               "ViewState": "AgIAACMAAAAAAAAAAAAswFMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -85,13 +237,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "MainForm.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\Forms\\MainForm.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Software-Development\\Software-Development\\App\\App\\Forms\\MainForm.cs",
               "RelativeDocumentMoniker": "App\\Forms\\MainForm.cs",
-              "ToolTip": "C:\\Users\\admin\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\Forms\\MainForm.cs",
+              "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\Software-Development\\Software-Development\\App\\App\\Forms\\MainForm.cs",
               "RelativeToolTip": "App\\Forms\\MainForm.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAswFYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-03T08:12:36.055Z",
               "EditorCaption": ""

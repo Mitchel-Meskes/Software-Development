@@ -9,6 +9,10 @@
         private System.Windows.Forms.Label timerLabel;
         private System.Windows.Forms.Timer timerControl;
 
+        // Nieuwe componenten
+        private System.Windows.Forms.ComboBox difficultyComboBox;
+        private System.Windows.Forms.Button generateButton;
+
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
@@ -18,6 +22,11 @@
             startButton = new Button();
             timerLabel = new Label();
             timerControl = new System.Windows.Forms.Timer(components);
+
+            // Nieuwe componenten initialiseren
+            difficultyComboBox = new ComboBox();
+            generateButton = new Button();
+
             SuspendLayout();
             // 
             // gridPanel
@@ -62,23 +71,42 @@
             timerLabel.TabIndex = 4;
             timerLabel.Text = "Time: 00:00";
             // 
-            // timerControl
+            // difficultyComboBox
             // 
+            difficultyComboBox.Location = new Point(20, 480);
+            difficultyComboBox.Name = "difficultyComboBox";
+            difficultyComboBox.Size = new Size(120, 21);
+            difficultyComboBox.Items.AddRange(new object[] { "Easy", "Medium", "Hard" });
+            difficultyComboBox.SelectedIndex = 0;
+            // 
+            // generateButton
+            // 
+            generateButton.Location = new Point(160, 478);
+            generateButton.Name = "generateButton";
+            generateButton.Size = new Size(120, 25);
+            generateButton.Text = "Genereer puzzel";
+            generateButton.Click += GenerateButton_Click;
+            //
+            // timerControl
+            //
             timerControl.Interval = 1000;
             timerControl.Tick += TimerControl_Tick;
-            // 
+            //
             // MainForm
-            // 
+            //
             ClientSize = new Size(756, 673);
             Controls.Add(gridPanel);
             Controls.Add(resetButton);
             Controls.Add(submitButton);
             Controls.Add(startButton);
             Controls.Add(timerLabel);
+            Controls.Add(difficultyComboBox);
+            Controls.Add(generateButton);
             Name = "MainForm";
             Text = "Nonogram Puzzle";
             ResumeLayout(false);
         }
+
         private System.ComponentModel.IContainer components;
     }
 }
