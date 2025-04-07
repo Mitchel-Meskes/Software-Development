@@ -1,50 +1,48 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.Json;
 
 namespace App.Services
 {
-    public class GameStats
+    public static class SettingsManager
     {
-        public string Username { get; set; }
-        public int CompletedPuzzles { get; set; }
-        public double TotalPlayTimeMinutes { get; set; }
+        // Assuming settings are stored in a JSON file
+        private static readonly string SettingsFilePath = "Resources/settings.json";
+
+        // Load settings from the settings.json file
+        public static Settings LoadSettings()
+        {
+            if (!File.Exists(SettingsFilePath))
+                return new Settings(); // Return empty settings if file doesn't exist
+
+            string json = File.ReadAllText(SettingsFilePath);
+            return JsonSerializer.Deserialize<Settings>(json) ?? new Settings();
+        }
+
+        // Save settings to the settings.json file
+        public static void SaveSettings(Settings settings)
+        {
+            string json = JsonSerializer.Serialize(settings, new JsonSerializerOptions { WriteIndented = true });
+            File.WriteAllText(SettingsFilePath, json);
+        }
     }
 
-    public static class StatisticsService
+    // ✅ The actual Settings class used by SettingsManager
+    public class Settings
     {
-        private static readonly string FilePath = "Resources/statistics.json";
+        public UserPreferences Preferences { get; set; } = new UserPreferences();
+        public DateTime LastUpdated { get; set; } = DateTime.Now;
+    }
 
-        public static List<GameStats> LoadStats()
-        {
-            if (!File.Exists(FilePath)) return new List<GameStats>();
-            string json = File.ReadAllText(FilePath);
-            return JsonSerializer.Deserialize<List<GameStats>>(json);
-        }
+    public class UserPreferences
+    {
+        public string Theme { get; set; } = "Light";
+        public string Language { get; set; } = "en";
 
-        public static void SaveStats(List<GameStats> stats)
-        {
-            string json = JsonSerializer.Serialize(stats, new JsonSerializerOptions { WriteIndented = true });
-            File.WriteAllText(FilePath, json);
-        }
-
-        public static void UpdateStats(string username, double playTimeMinutes)
-        {
-            var stats = LoadStats();
-            var player = stats.FirstOrDefault(s => s.Username == username);
-
-            if (player == null)
-            {
-                stats.Add(new GameStats { Username = username, CompletedPuzzles = 1, TotalPlayTimeMinutes = playTimeMinutes });
-            }
-            else
-            {
-                player.CompletedPuzzles++;
-                player.TotalPlayTimeMinutes += playTimeMinutes;
-            }
-
-            SaveStats(stats);
-        }
+        // Add GridSize property
+        public int GridSize { get; set; } = 5;  // Default grid size, adjust if needed
     }
 }
+

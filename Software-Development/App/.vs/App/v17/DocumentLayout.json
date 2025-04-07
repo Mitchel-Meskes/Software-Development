@@ -1,0 +1,104 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\admin\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|c:\\users\\admin\\source\\repos\\mitchel-meskes\\software-development\\software-development\\app\\app\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|solutionrelative:app\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|c:\\users\\admin\\source\\repos\\mitchel-meskes\\software-development\\software-development\\app\\app\\app.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|solutionrelative:app\\app.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|c:\\users\\admin\\source\\repos\\mitchel-meskes\\software-development\\software-development\\app\\app\\forms\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|solutionrelative:app\\forms\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|c:\\users\\admin\\source\\repos\\mitchel-meskes\\software-development\\software-development\\app\\app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|solutionrelative:app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|c:\\users\\admin\\source\\repos\\mitchel-meskes\\software-development\\software-development\\app\\app\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|solutionrelative:app\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\Program.cs",
+              "RelativeDocumentMoniker": "App\\Program.cs",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\Program.cs",
+              "RelativeToolTip": "App\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T12:22:47.056Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\Forms\\MainForm.cs",
+              "RelativeDocumentMoniker": "App\\Forms\\MainForm.cs",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\Forms\\MainForm.cs [Design]",
+              "RelativeToolTip": "App\\Forms\\MainForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T07:02:22.397Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "App.csproj",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\App.csproj",
+              "RelativeDocumentMoniker": "App\\App.csproj",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\App.csproj",
+              "RelativeToolTip": "App\\App.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-05T10:21:54.569Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\Forms\\MainForm.Designer.cs",
+              "RelativeDocumentMoniker": "App\\Forms\\MainForm.Designer.cs",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\Forms\\MainForm.Designer.cs",
+              "RelativeToolTip": "App\\Forms\\MainForm.Designer.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAswFMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-05T10:16:35.277Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\Forms\\MainForm.cs",
+              "RelativeDocumentMoniker": "App\\Forms\\MainForm.cs",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\Forms\\MainForm.cs",
+              "RelativeToolTip": "App\\Forms\\MainForm.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAswFYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T08:12:36.055Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

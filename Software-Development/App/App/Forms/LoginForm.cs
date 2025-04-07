@@ -1,81 +1,83 @@
 ﻿using System;
 using System.Windows.Forms;
-using App.Models;
 using App.Services;
+using App.Models;
 using App.Utils;
 
 namespace App.Forms
 {
     public partial class LoginForm : Form
     {
-        private TextBox txtUsername;
-        private TextBox txtPassword;
-        private Button btnLogin;
-        private Button btnRegister;
-
         public LoginForm()
         {
             InitializeComponent();
         }
 
-        private void InitializeComponent()
+        private void btnLogin_Click(object sender, EventArgs e)
         {
-            this.txtUsername = new TextBox { PlaceholderText = "Gebruikersnaam", Top = 20, Width = 200, Left = 10 };
-            this.txtPassword = new TextBox { PlaceholderText = "Wachtwoord", Top = 50, Width = 200, Left = 10, PasswordChar = '*' };
-            this.btnLogin = new Button { Text = "Inloggen", Top = 85, Width = 95, Left = 10 };
-            this.btnRegister = new Button { Text = "Registreren", Top = 85, Width = 95, Left = 115 };
+            // Retrieve the username and password from the textboxes
+            string username = txtUsername.Text;
+            string password = txtPassword.Text;
 
-            this.btnLogin.Click += BtnLogin_Click;
-            this.btnRegister.Click += BtnRegister_Click;
-
-            this.Controls.Add(txtUsername);
-            this.Controls.Add(txtPassword);
-            this.Controls.Add(btnLogin);
-            this.Controls.Add(btnRegister);
-            this.Text = "Login";
-            this.StartPosition = FormStartPosition.CenterScreen;
-            this.ClientSize = new System.Drawing.Size(240, 140);
-        }
-
-        private void BtnLogin_Click(object sender, EventArgs e)
-        {
-            var users = UserService.LoadUsers();
-            string hash = UserService.HashPassword(txtPassword.Text);
-
-            if (users.Exists(u => u.Username == txtUsername.Text && u.PasswordHash == hash))
+            // Check if both username and password are entered
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
-                Logger.Info($"Inloggen geslaagd voor {txtUsername.Text}");
-                this.Hide();
-                var settings = SettingsManager.LoadSettings();
-                var mainForm = new MainForm(txtUsername.Text, settings);
-                mainForm.ShowDialog();
-                this.Close();
-            }
-            else
-            {
-                Logger.Warning("Mislukte inlogpoging");
-                MessageBox.Show("Onjuiste gebruikersnaam of wachtwoord.");
-            }
-        }
-
-        private void BtnRegister_Click(object sender, EventArgs e)
-        {
-            var users = UserService.LoadUsers();
-            if (users.Exists(u => u.Username == txtUsername.Text))
-            {
-                MessageBox.Show("Gebruiker bestaat al.");
+                MessageBox.Show("Please enter both username and password.");
                 return;
             }
 
-            users.Add(new User
-            {
-                Username = txtUsername.Text,
-                PasswordHash = UserService.HashPassword(txtPassword.Text)
-            });
+            // Load the list of users
+            var users = UserService.LoadUsers();
+            string hash = UserService.HashPassword(password);
 
+            // Check if the user exists with the provided credentials
+            var user = users.Find(u => u.Username == username && u.PasswordHash == hash);
+            if (user == null)
+            {
+                MessageBox.Show("Invalid username or password.");
+                Logger.Warning("Failed login attempt.");
+                return;
+            }
+
+            Logger.Info($"Login successful for {username}");
+
+            // Load settings and open the MainForm
+            Settings settings = SettingsManager.LoadSettings();
+            MainForm mainForm = new MainForm(username, settings);
+            mainForm.Show();
+            this.Hide();
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            string username = txtUsername.Text;
+            string password = txtPassword.Text;
+
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+            {
+                MessageBox.Show("Please enter both username and password.");
+                return;
+            }
+
+            var users = UserService.LoadUsers();
+            if (users.Exists(u => u.Username == username))
+            {
+                MessageBox.Show("Username already exists.");
+                return;
+            }
+
+            var newUser = new User
+            {
+                Username = username,
+                PasswordHash = UserService.HashPassword(password)
+            };
+
+            users.Add(newUser);
             UserService.SaveUsers(users);
-            Logger.Info($"Nieuwe registratie: {txtUsername.Text}");
-            MessageBox.Show("Registratie geslaagd.");
+
+            Logger.Info($"New registration: {username}");
+
+            MessageBox.Show("Registration successful. Please log in.");
         }
     }
 }
