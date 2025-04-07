@@ -19,7 +19,7 @@
       "RelativeMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|solutionrelative:app\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|c:\\users\\admin\\documents\\github\\software-development\\software-development\\app\\app\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|C:\\Users\\admin\\Documents\\GitHub\\Software-Development\\Software-Development\\App\\app\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|solutionrelative:app\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -27,7 +27,7 @@
       "RelativeMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|solutionrelative:app\\forms\\loginform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|c:\\users\\admin\\documents\\github\\software-development\\software-development\\app\\app\\forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|C:\\Users\\admin\\Documents\\GitHub\\Software-Development\\Software-Development\\App\\app\\forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|solutionrelative:app\\forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -91,8 +91,7 @@
               "RelativeToolTip": "App\\Forms\\LoginForm.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T19:37:19.323Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-07T19:37:19.323Z"
             },
             {
               "$type": "Document",
@@ -104,8 +103,7 @@
               "RelativeToolTip": "App\\Services\\SettingsManager.cs",
               "ViewState": "AgIAACEAAAAAAAAAAAAcwDAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T19:36:41.786Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-07T19:36:41.786Z"
             },
             {
               "$type": "Document",
@@ -117,8 +115,7 @@
               "RelativeToolTip": "App\\Models\\NonogramPuzzle.cs",
               "ViewState": "AgIAACQAAAAAAAAAAAAiwEkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T19:28:11.849Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-07T19:28:11.849Z"
             },
             {
               "$type": "Document",
@@ -130,8 +127,7 @@
               "RelativeToolTip": "App\\Services\\UserService.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAuwCMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T19:27:33.385Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-07T19:27:33.385Z"
             },
             {
               "$type": "Document",
@@ -143,8 +139,7 @@
               "RelativeToolTip": "App\\Models\\User.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T19:24:18.938Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-07T19:24:18.938Z"
             },
             {
               "$type": "Document",
@@ -156,8 +151,7 @@
               "RelativeToolTip": "App\\Services\\GameStatsService.cs",
               "ViewState": "AgIAABgAAAAAAAAAAAAuwCsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T19:15:22.106Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-07T19:15:22.106Z"
             },
             {
               "$type": "Document",
@@ -169,8 +163,7 @@
               "RelativeToolTip": "App\\Models\\GameStats.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAiwBEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T19:15:19.607Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-07T19:15:19.607Z"
             },
             {
               "$type": "Document",
@@ -194,8 +187,7 @@
               "RelativeToolTip": "App\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T12:22:47.056Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-06T12:22:47.056Z"
             },
             {
               "$type": "Document",
@@ -206,8 +198,7 @@
               "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\Software-Development\\Software-Development\\App\\App\\Forms\\MainForm.cs [Design]",
               "RelativeToolTip": "App\\Forms\\MainForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T07:02:22.397Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-04-06T07:02:22.397Z"
             },
             {
               "$type": "Document",
@@ -232,8 +223,7 @@
               "RelativeToolTip": "App\\Forms\\MainForm.Designer.cs",
               "ViewState": "AgIAACMAAAAAAAAAAAAswFMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-05T10:16:35.277Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-05T10:16:35.277Z"
             },
             {
               "$type": "Document",
@@ -245,8 +235,7 @@
               "RelativeToolTip": "App\\Forms\\MainForm.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T08:12:36.055Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-03T08:12:36.055Z"
             }
           ]
         }
