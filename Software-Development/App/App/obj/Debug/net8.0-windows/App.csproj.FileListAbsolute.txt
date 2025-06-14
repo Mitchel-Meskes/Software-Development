@@ -31,3 +31,9 @@ C:\Users\admin\Documents\GitHub\Software-Development\Software-Development\App\Ap
 C:\Users\admin\Documents\GitHub\Software-Development\Software-Development\App\App\obj\Debug\net8.0-windows\refint\App.dll
 C:\Users\admin\Documents\GitHub\Software-Development\Software-Development\App\App\obj\Debug\net8.0-windows\App.pdb
 C:\Users\admin\Documents\GitHub\Software-Development\Software-Development\App\App\obj\Debug\net8.0-windows\App.csproj.AssemblyReference.cache
+C:\Users\pmec\source\repos\Mitchel-Meskes\Software-Development\Software-Development\App\App\obj\Debug\net8.0-windows\App.Forms.LoginForm.resources
+C:\Users\pmec\source\repos\Mitchel-Meskes\Software-Development\Software-Development\App\App\obj\Debug\net8.0-windows\App.Forms.MainForm.resources
+C:\Users\pmec\source\repos\Mitchel-Meskes\Software-Development\Software-Development\App\App\obj\Debug\net8.0-windows\App.csproj.GenerateResource.cache
+C:\Users\pmec\source\repos\Mitchel-Meskes\Software-Development\Software-Development\App\App\obj\Debug\net8.0-windows\App.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pmec\source\repos\Mitchel-Meskes\Software-Development\Software-Development\App\App\obj\Debug\net8.0-windows\App.csproj.CoreCompileInputs.cache
+C:\Users\pmec\source\repos\Mitchel-Meskes\Software-Development\Software-Development\App\App\obj\Debug\net8.0-windows\App.sourcelink.json

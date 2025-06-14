@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Diagnostics;
-using System.Linq;
 using System.Drawing;
 using System.Windows.Forms;
 using App.Models;
@@ -14,7 +13,7 @@ namespace App.Forms
         private readonly Settings settings;
         private NonogramPuzzle puzzle;
         private Stopwatch timer;
-        private int cellSize = 25;
+        private int cellSize;
 
         public MainForm(string username, Settings settings)
         {
@@ -34,6 +33,8 @@ namespace App.Forms
             gridPanel.Controls.Clear();
 
             int size = settings.Preferences.GridSize;
+            cellSize = Math.Max(10, 250 / size); // Dynamische celgrootte
+
             gridPanel.Size = new Size(size * cellSize, size * cellSize);
             gridPanel.BackColor = Color.White;
             gridPanel.BorderStyle = BorderStyle.FixedSingle;
@@ -71,7 +72,14 @@ namespace App.Forms
 
         private void SubmitButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Puzzle submitted!");
+            if (puzzle.IsSolved())
+            {
+                MessageBox.Show("Congratulations, you solved the puzzle!");
+            }
+            else
+            {
+                MessageBox.Show("The solution is incorrect, try again.");
+            }
         }
 
         private void PauseButton_Click(object sender, EventArgs e)
@@ -92,8 +100,8 @@ namespace App.Forms
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
-            // Hier kun je je eigen logica toevoegen voor het opslaan
-            MessageBox.Show("Puzzle saved!");
+            // Placeholder: je zou een PuzzleService.SavePuzzle(puzzle, username) kunnen maken
+            MessageBox.Show("Puzzle saved! (feature to be implemented)");
         }
 
         private void TimerControl_Tick(object sender, EventArgs e)
@@ -105,26 +113,22 @@ namespace App.Forms
             }
         }
 
-        // Deze methode wordt aangeroepen wanneer op de "Genereer puzzel" knop wordt geklikt
         private void GenerateButton_Click(object sender, EventArgs e)
         {
-            // Verkrijg de geselecteerde moeilijkheidsgraad
             string selectedDifficulty = difficultyComboBox.SelectedItem.ToString();
 
-            // Verander de grootte van de grid afhankelijk van de moeilijkheidsgraad
             int gridSize = selectedDifficulty switch
             {
-                "Easy" => 5,     // Makkelijk: 5x5
-                "Medium" => 7,   // Medium: 7x7
-                "Hard" => 10,    // Moeilijk: 10x10
-                _ => 5          // Standaard naar Easy
+                "Easy" => 5,
+                "Medium" => 7,
+                "Hard" => 10,
+                _ => 5
             };
 
-            // Stel de nieuwe gridgrootte in op basis van de gekozen moeilijkheidsgraad
             settings.Preferences.GridSize = gridSize;
             puzzle = new NonogramPuzzle(gridSize);
             InitPuzzle();
-            timer.Restart();  // Reset de timer voor de nieuwe puzzel
+            timer.Restart();
         }
     }
 }

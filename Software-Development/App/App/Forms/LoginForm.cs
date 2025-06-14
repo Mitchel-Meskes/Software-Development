@@ -11,83 +11,106 @@ namespace App.Forms
         public LoginForm()
         {
             InitializeComponent();
+
+            // Automatisch schalen op DPI
+            this.AutoScaleMode = AutoScaleMode.Dpi;
+            // Form automatisch laten groeien/krimpen indien nodig
+            this.AutoSize = true;
+            this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            // Startpositie in het midden van het scherm
+            this.StartPosition = FormStartPosition.CenterScreen;
+            // Minimale grootte instellen
+            this.MinimumSize = new Size(400, 300); // Pas aan naar wens
+            // Optioneel: standaardgrootte instellen
+            this.Size = new Size(500, 350); // Pas aan naar wens
+            // Optioneel: groter lettertype voor leesbaarheid
+            this.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            // Verkrijg de gebruikersnaam en wachtwoord uit de tekstvakken
-            string username = txtUsername.Text;
+            string username = txtUsername.Text.Trim();
             string password = txtPassword.Text;
 
-            // Controleer of zowel gebruikersnaam als wachtwoord zijn ingevoerd
-            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrEmpty(password))
             {
-                MessageBox.Show("Please enter both username and password.");
+                MessageBox.Show("Vul zowel gebruikersnaam als wachtwoord in.", "Invoer ontbreekt", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            // Laad de lijst met gebruikers
-            var users = UserService.LoadUsers();
-            string hash = UserService.HashPassword(password);
-
-            // Zoek naar de gebruiker met de opgegeven gegevens
-            var user = users.Find(u => u.Username == username && u.PasswordHash == hash);
-            if (user == null)
+            try
             {
-                MessageBox.Show("Invalid username or password.");
-                Logger.Warning("Failed login attempt.");
-                return;
+                var users = UserService.LoadUsers();
+                string hash = UserService.HashPassword(password);
+
+                var user = users.Find(u => u.Username.Equals(username, StringComparison.OrdinalIgnoreCase) && u.PasswordHash == hash);
+                if (user == null)
+                {
+                    MessageBox.Show("Ongeldige gebruikersnaam of wachtwoord.", "Login mislukt", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Logger.Warning($"Mislukte login poging voor gebruiker: {username}");
+                    return;
+                }
+
+                Logger.Info($"Login succesvol voor gebruiker: {username}");
+
+                // Optioneel: game stats tonen
+                var gameStatsService = new GameStatsService();
+                var stats = gameStatsService.GetGameStatsByUsername(username);
+                if (stats != null)
+                {
+                    MessageBox.Show($"Spelstatistieken voor {username}:\nVoltooide puzzels: {stats.CompletedPuzzles}\nTotale speeltijd: {stats.TotalPlayTimeMinutes} minuten", "Spelstatistieken", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+                var settings = SettingsManager.LoadSettings();
+                var mainForm = new MainForm(username, settings);
+                mainForm.Show();
+                this.Hide();
             }
-
-            Logger.Info($"Login successful for {username}");
-
-            // Laad de game-statistieken voor de ingelogde gebruiker
-            GameStatsService gameStatsService = new GameStatsService();
-            GameStats userStats = gameStatsService.GetGameStatsByUsername(username);
-
-            if (userStats != null)
+            catch (Exception ex)
             {
-                MessageBox.Show($"Game Stats for {username}:\nCompleted Puzzles: {userStats.CompletedPuzzles}\nTotal Play Time: {userStats.TotalPlayTimeMinutes} minutes");
+                Logger.Error($"Fout tijdens login: {ex.Message}");
+                MessageBox.Show("Er is een fout opgetreden bij het inloggen. Probeer het later opnieuw.", "Fout", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else
-            {
-                MessageBox.Show("No game stats found for this user.");
-            }
-
-            // Laad instellingen en open het MainForm
-            Settings settings = SettingsManager.LoadSettings();
-            MainForm mainForm = new MainForm(username, settings);
-            mainForm.Show();
-            this.Hide();
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            string username = txtUsername.Text;
+            string username = txtUsername.Text.Trim();
             string password = txtPassword.Text;
 
-            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrEmpty(password))
             {
-                MessageBox.Show("Please enter both username and password.");
+                MessageBox.Show("Vul zowel gebruikersnaam als wachtwoord in.", "Invoer ontbreekt", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            var users = UserService.LoadUsers();
-            if (users.Exists(u => u.Username == username))
+            try
             {
-                MessageBox.Show("Username already exists.");
-                return;
+                var users = UserService.LoadUsers();
+
+                if (users.Exists(u => u.Username.Equals(username, StringComparison.OrdinalIgnoreCase)))
+                {
+                    MessageBox.Show("Deze gebruikersnaam bestaat al.", "Registratie mislukt", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                var newUser = new User(username, UserService.HashPassword(password));
+                users.Add(newUser);
+                UserService.SaveUsers(users);
+
+                Logger.Info($"Nieuwe gebruiker geregistreerd: {username}");
+                MessageBox.Show("Registratie gelukt! Je kunt nu inloggen.", "Succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                // Optioneel: maak velden leeg en focus op username
+                txtUsername.Clear();
+                txtPassword.Clear();
+                txtUsername.Focus();
             }
-
-            // ✅ Gebruik nu de constructor van User correct
-            var newUser = new User(username, UserService.HashPassword(password));
-
-            users.Add(newUser);
-            UserService.SaveUsers(users);
-
-            Logger.Info($"New registration: {username}");
-
-            MessageBox.Show("Registration successful. Please log in.");
+            catch (Exception ex)
+            {
+                Logger.Error($"Fout tijdens registratie: {ex.Message}");
+                MessageBox.Show("Er is een fout opgetreden bij het registreren. Probeer het later opnieuw.", "Fout", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

@@ -1,0 +1,45 @@
+# Build results
+bin/
+obj/
+out/
+
+# User-specific files
+.vs/
+.vscode/*.code-workspace
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Auto-generated files
+Generated_Code/
+
+# Package management
+packages/
+*.nupkg
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+
+# Dotnet CLI
+*.dbmdl
+
+# Test results
+TestResults/
+*.pidb
+
+# Secrets (adjust as needed)
+secrets.json
+appsettings.Development.json
