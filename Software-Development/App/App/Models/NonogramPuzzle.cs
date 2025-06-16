@@ -68,6 +68,18 @@ namespace App.Models
 
             return new NonogramPuzzle(Size) { Grid = newGrid };
         }
+
+        public bool IsSolved()
+        {
+            foreach (var row in Grid)
+            {
+                foreach (var cell in row)
+                {
+                    if (cell == 0)
+                        return false; // Nog lege cel gevonden
+                }
+            }
+            return true;
+        }
     }
 }
-

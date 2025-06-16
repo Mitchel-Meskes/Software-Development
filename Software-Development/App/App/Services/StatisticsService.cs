@@ -1,40 +1,45 @@
 ﻿using System;
-using System.IO;
 using System.Collections.Generic;
-using App.Models;  // Adjust the namespace as needed for your project
+using System.IO;
 using System.Linq;
+using System.Text.Json;
+using App.Models;
+using App.Tests.Utils;
+using App.Utils;  // Verplaatst TestFileHelper naar hoofdproject onder App/Utils
 
 namespace App.Services
 {
     public static class StatisticsService
     {
-        private static readonly string statisticsFilePath = "Resources/statistics.json";
+        private static readonly string statisticsFilePath = TestFileHelper.GetTestFilePath("statistics.json");
 
-        // Load the statistics
         public static List<GameStats> LoadStats()
         {
-            if (!File.Exists(statisticsFilePath)) return new List<GameStats>();
+            if (!File.Exists(statisticsFilePath) || new FileInfo(statisticsFilePath).Length == 0)
+                return new List<GameStats>();
+
             string json = File.ReadAllText(statisticsFilePath);
-            return System.Text.Json.JsonSerializer.Deserialize<List<GameStats>>(json);
+            return JsonSerializer.Deserialize<List<GameStats>>(json) ?? new List<GameStats>();
         }
 
-        // Save the statistics
         public static void SaveStats(List<GameStats> stats)
         {
-            string json = System.Text.Json.JsonSerializer.Serialize(stats, new System.Text.Json.JsonSerializerOptions { WriteIndented = true });
+            string json = JsonSerializer.Serialize(stats, new JsonSerializerOptions { WriteIndented = true });
+
+            string? dir = Path.GetDirectoryName(statisticsFilePath);
+            if (!string.IsNullOrEmpty(dir) && !Directory.Exists(dir))
+                Directory.CreateDirectory(dir);
+
             File.WriteAllText(statisticsFilePath, json);
         }
 
-        // Update statistics for a user
         public static void UpdateStats(string username, double playTimeMinutes)
         {
             var stats = LoadStats();
             var player = stats.FirstOrDefault(s => s.Username == username);
 
             if (player == null)
-            {
-                stats.Add(new GameStats { Username = username, CompletedPuzzles = 1, TotalPlayTimeMinutes = playTimeMinutes });
-            }
+                stats.Add(new GameStats(username, 1, playTimeMinutes));
             else
             {
                 player.CompletedPuzzles++;
