@@ -18,8 +18,16 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -28,18 +36,10 @@
               "RelativeDocumentMoniker": "App\\Services\\UserService.cs",
               "ToolTip": "C:\\Users\\Mitch\\OneDrive\\Bureaublad\\Software-Development\\Software-Development\\App\\App\\Services\\UserService.cs",
               "RelativeToolTip": "App\\Services\\UserService.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAiwDIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAADwv0QAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-16T18:16:16.192Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
@@ -51,8 +51,7 @@
               "RelativeToolTip": "App\\Utils\\TestFileHelper.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAgwDkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T17:00:14.632Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-16T17:00:14.632Z"
             }
           ]
         }

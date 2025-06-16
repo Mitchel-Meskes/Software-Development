@@ -6,7 +6,7 @@ using System.Text;
 using System.Text.Json;
 using App.Models;
 using App.Tests.Utils;
-using App.Utils;  // TestFileHelper is nu in App.Utils
+using App.Utils; // TestFileHelper is nu verplaatst naar hoofdproject App.Utils
 
 namespace App.Services
 {
@@ -31,12 +31,30 @@ namespace App.Services
             if (!string.IsNullOrEmpty(dir) && !Directory.Exists(dir))
                 Directory.CreateDirectory(dir);
 
-            // Forceer veilige overschrijving
-            using (FileStream fs = new FileStream(FilePath, FileMode.Create, FileAccess.Write, FileShare.None))
-            using (StreamWriter writer = new StreamWriter(fs))
+            // Forceer veilige overschrijving met file lock-beheer
+            const int maxTries = 10;
+            for (int i = 0; i < maxTries; i++)
             {
-                writer.Write(json);
+                try
+                {
+                    using (FileStream fs = new FileStream(FilePath, FileMode.Create, FileAccess.Write, FileShare.None))
+                    using (StreamWriter writer = new StreamWriter(fs))
+                    {
+                        writer.Write(json);
+                    }
+                    return;
+                }
+                catch (IOException)
+                {
+                    Thread.Sleep(100);
+                }
+                catch (UnauthorizedAccessException)
+                {
+                    Thread.Sleep(100);
+                }
             }
+
+            throw new IOException($"Kon bestand '{FilePath}' niet schrijven na meerdere pogingen.");
         }
 
         public static string HashPassword(string password)
