@@ -20,6 +20,9 @@ namespace App.Tests.Utils
         {
             string fullPath = GetTestFilePath(fileName);
 
+            // Geef het systeem even de tijd na een clean build
+            Thread.Sleep(200); // Voorkomt file lock race condition
+
             const int maxTries = 10;
             for (int i = 0; i < maxTries; i++)
             {
@@ -27,16 +30,25 @@ namespace App.Tests.Utils
                 {
                     if (File.Exists(fullPath))
                     {
+                        // Forceer toegang en verbreek eventuele lock
                         using (FileStream stream = new FileStream(fullPath, FileMode.Open, FileAccess.ReadWrite, FileShare.None))
                         {
-                            // Bestandslock opgeheven
+                            // Bestand is nu vrij
                         }
+
                         File.Delete(fullPath);
                     }
+
                     return;
                 }
-                catch (IOException) { Thread.Sleep(100); }
-                catch (UnauthorizedAccessException) { Thread.Sleep(100); }
+                catch (IOException)
+                {
+                    Thread.Sleep(100);
+                }
+                catch (UnauthorizedAccessException)
+                {
+                    Thread.Sleep(100);
+                }
             }
 
             throw new IOException($"Kon testbestand '{fullPath}' niet verwijderen na meerdere pogingen.");

@@ -6,7 +6,7 @@ using System.Text;
 using System.Text.Json;
 using App.Models;
 using App.Tests.Utils;
-using App.Utils;  // Verplaatst TestFileHelper naar hoofdproject onder App/Utils
+using App.Utils;  // TestFileHelper is nu in App.Utils
 
 namespace App.Services
 {
@@ -31,7 +31,12 @@ namespace App.Services
             if (!string.IsNullOrEmpty(dir) && !Directory.Exists(dir))
                 Directory.CreateDirectory(dir);
 
-            File.WriteAllText(FilePath, json);
+            // Forceer veilige overschrijving
+            using (FileStream fs = new FileStream(FilePath, FileMode.Create, FileAccess.Write, FileShare.None))
+            using (StreamWriter writer = new StreamWriter(fs))
+            {
+                writer.Write(json);
+            }
         }
 
         public static string HashPassword(string password)
