@@ -3,8 +3,13 @@
     "",
     "\\Software-Development",
     "\\Software-Development\\App",
-    "\\Software-Development\\App\\App"
+    "\\Software-Development\\App\\App",
+    "\\Software-Development\\App\\App\\Forms",
+    "\\Software-Development\\App\\App\\Models",
+    "\\Software-Development\\App\\App\\Properties",
+    "\\Software-Development\\App\\App\\Resources",
+    "\\Software-Development\\App\\App\\Services",
+    "\\Software-Development\\App\\App\\Utils"
   ],
-  "SelectedNode": "\\Software-Development\\.gitignore",
   "PreviewInSolutionExplorer": false
 }

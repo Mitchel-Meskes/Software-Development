@@ -1,35 +1,33 @@
-using App.Models;
+using App.Models; // Make sure to use the Models Difficulty
+using System;
 
 namespace App.Services
 {
-    public enum Difficulty
-    {
-        Easy,
-        Medium,
-        Hard
-    }
-
     public class PuzzleGenerator
     {
         private Random _random = new Random();
 
-        public NonogramPuzzle Generate(int size, Difficulty difficulty)
+        // Use App.Models.Difficulty here to match NonogramPuzzle
+        public NonogramPuzzle Generate(int size, App.Models.Difficulty difficulty)
         {
-            var puzzle = new NonogramPuzzle(size);
+            // Pass both size and difficulty
+            var puzzle = new NonogramPuzzle(size, difficulty);
 
             int density = difficulty switch
             {
-                Difficulty.Easy => 20,
-                Difficulty.Medium => 35,
-                Difficulty.Hard => 50,
+                App.Models.Difficulty.Easy => 20,
+                App.Models.Difficulty.Medium => 35,
+                App.Models.Difficulty.Hard => 50,
                 _ => 25
             };
 
-            for (int i = 0; i < size; i++)
+            // Fill the solution grid randomly according to density
+            for (int r = 0; r < size; r++)
             {
-                for (int j = 0; j < size; j++)
+                for (int c = 0; c < size; c++)
                 {
-                    puzzle.Grid[i][j] = _random.Next(100) < density ? 1 : 0;
+                    puzzle.Solution[r][c] = _random.Next(100) < density ? 1 : 0;
+                    puzzle.Grid[r][c] = 0; // player grid starts empty
                 }
             }
 
