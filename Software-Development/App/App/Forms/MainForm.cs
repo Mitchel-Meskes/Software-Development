@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using App.Models;
 using App.Services;
+using System.Linq;
 
 namespace App.Forms
 {
@@ -13,73 +14,138 @@ namespace App.Forms
         private readonly Settings settings;
         private NonogramPuzzle puzzle;
         private Stopwatch timer;
-        private int cellSize;
+        private TableLayoutPanel gridPanel;
+        private bool gameActive = false;
+
+
 
         public MainForm(string username, Settings settings)
         {
             this.username = username;
             this.settings = settings;
-            this.puzzle = new NonogramPuzzle(settings.Preferences.GridSize);
             this.timer = new Stopwatch();
+            this.timerControl = new System.Windows.Forms.Timer();
 
             InitializeComponent();
-            InitPuzzle();
-            timer.Start();
-            timerControl.Start();
+            InitializeGridPanel();
+
+            // Initialize default puzzle
+            int gridSize = settings.Preferences.GridSize;
+            puzzle = new NonogramPuzzle(gridSize, Difficulty.Easy);
+            BuildGrid();
+
+            // Timer setup
+            timerControl.Interval = 1000;
+            timerControl.Tick += TimerControl_Tick;
         }
 
-        private void InitPuzzle()
+        private void InitializeGridPanel()
+        {
+            gridPanel = new TableLayoutPanel
+            {
+                Dock = DockStyle.None,
+                Location = new Point(20, 20),
+                Size = new Size(400, 400),
+                CellBorderStyle = TableLayoutPanelCellBorderStyle.Single
+            };
+            this.Controls.Add(gridPanel);
+        }
+
+        private void BuildGrid()
         {
             gridPanel.Controls.Clear();
+            gridPanel.ColumnStyles.Clear();
+            gridPanel.RowStyles.Clear();
 
-            int size = settings.Preferences.GridSize;
-            cellSize = Math.Max(10, 250 / size); // Dynamische celgrootte
+            int size = puzzle.Size;
 
-            gridPanel.Size = new Size(size * cellSize, size * cellSize);
-            gridPanel.BackColor = Color.White;
-            gridPanel.BorderStyle = BorderStyle.FixedSingle;
+            // +1 for clue row/column
+            gridPanel.ColumnCount = size + 1;
+            gridPanel.RowCount = size + 1;
 
-            for (int row = 0; row < size; row++)
+            for (int i = 0; i <= size; i++)
             {
-                for (int col = 0; col < size; col++)
+                gridPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100f / (size + 1)));
+                gridPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 100f / (size + 1)));
+            }
+
+            var rowHints = puzzle.GetRowClues(); // int[]
+            var colHints = puzzle.GetColumnClues(); // int[]
+
+            // Top-left empty
+            gridPanel.Controls.Add(new Label { Text = "", Dock = DockStyle.Fill }, 0, 0);
+
+            // Column hints
+            for (int c = 0; c < size; c++)
+            {
+                var lbl = new Label
                 {
-                    Label cell = new Label
+                    Text = colHints[c].ToString(),
+                    Dock = DockStyle.Fill,
+                    TextAlign = ContentAlignment.MiddleCenter,
+                    Font = new Font(FontFamily.GenericSansSerif, 10)
+                };
+                gridPanel.Controls.Add(lbl, c + 1, 0);
+            }
+
+            // Row hints
+            for (int r = 0; r < size; r++)
+            {
+                var lbl = new Label
+                {
+                    Text = rowHints[r].ToString(),
+                    Dock = DockStyle.Fill,
+                    TextAlign = ContentAlignment.MiddleCenter,
+                    Font = new Font(FontFamily.GenericSansSerif, 10)
+                };
+                gridPanel.Controls.Add(lbl, 0, r + 1);
+            }
+
+            // Puzzle buttons
+            for (int r = 0; r < size; r++)
+            {
+                for (int c = 0; c < size; c++)
+                {
+                    var btn = new Button
                     {
-                        Size = new Size(cellSize, cellSize),
-                        Location = new Point(col * cellSize, row * cellSize),
-                        BorderStyle = BorderStyle.FixedSingle,
-                        BackColor = Color.LightGray
+                        Dock = DockStyle.Fill,
+                        Margin = new Padding(0),
+                        BackColor = Color.White,
+                        Tag = (r, c),
+                        Enabled = gameActive
                     };
-                    gridPanel.Controls.Add(cell);
+                    btn.Click += Cell_Click;
+                    gridPanel.Controls.Add(btn, c + 1, r + 1);
                 }
             }
         }
 
-        private void ResetButton_Click(object sender, EventArgs e)
+        private void Cell_Click(object sender, EventArgs e)
         {
-            puzzle = new NonogramPuzzle(settings.Preferences.GridSize);
-            InitPuzzle();
-            timer.Restart();
+            if (!gameActive) return;
+
+            var btn = sender as Button;
+            var (r, c) = ((int, int))btn.Tag;
+
+            puzzle.Grid[r][c] = puzzle.Grid[r][c] == 0 ? 1 : 0;
+            btn.BackColor = puzzle.Grid[r][c] == 0 ? Color.White : Color.Black;
+
+            if (puzzle.IsSolved())
+            {
+                MessageBox.Show("Congratulations! You solved the puzzle!");
+                timer.Stop();
+                timerControl.Stop();
+                gameActive = false;
+                DisableGrid();
+            }
         }
 
         private void StartButton_Click(object sender, EventArgs e)
         {
-            puzzle = new NonogramPuzzle(settings.Preferences.GridSize);
-            InitPuzzle();
-            timer.Restart();
+            gameActive = true;
+            timer.Start();
             timerControl.Start();
-        }
-
-        private void SubmitButton_Click(object sender, EventArgs e)
-        {
-            if (puzzle.IsSolved())
-            {
-                MessageBox.Show("Congratulations, you solved the puzzle!");
-            }
-            else
-            {
-                MessageBox.Show("The solution is incorrect, try again.");
-            }
+            EnableGrid();
         }
 
         private void PauseButton_Click(object sender, EventArgs e)
@@ -88,20 +154,62 @@ namespace App.Forms
             {
                 timer.Stop();
                 timerControl.Stop();
+                gameActive = false;
                 pauseButton.Text = "Resume";
+                DisableGrid();
             }
             else
             {
                 timer.Start();
                 timerControl.Start();
+                gameActive = true;
                 pauseButton.Text = "Pause";
+                EnableGrid();
             }
         }
 
-        private void SaveButton_Click(object sender, EventArgs e)
+        private void ResetButton_Click(object sender, EventArgs e)
         {
-            // Placeholder: je zou een PuzzleService.SavePuzzle(puzzle, username) kunnen maken
-            MessageBox.Show("Puzzle saved! (feature to be implemented)");
+            puzzle = new NonogramPuzzle(settings.Preferences.GridSize, GetSelectedDifficulty());
+            timer.Reset();
+            timerControl.Stop();
+            gameActive = false;
+            BuildGrid();
+            timerLabel.Text = "Time: 00:00";
+        }
+
+        private void GenerateButton_Click(object sender, EventArgs e)
+        {
+            puzzle = new NonogramPuzzle(GetGridSize(), GetSelectedDifficulty());
+            timer.Reset();
+            timerControl.Stop();
+            gameActive = false;
+            timerLabel.Text = "Time: 00:00";
+            BuildGrid();
+        }
+
+        private void SubmitButton_Click(object sender, EventArgs e)
+        {
+            if (puzzle.IsSolved())
+                MessageBox.Show("Congratulations! Puzzle solved!");
+            else
+                MessageBox.Show("The solution is incorrect, try again.");
+        }
+
+        private void ShowSolutionButton_Click(object sender, EventArgs e)
+        {
+            // Fill the grid with solution
+            for (int r = 0; r < puzzle.Size; r++)
+            {
+                for (int c = 0; c < puzzle.Size; c++)
+                {
+                    puzzle.Grid[r][c] = puzzle.Solution[r][c];
+                }
+            }
+            BuildGrid();
+            gameActive = false;
+            timerControl.Stop();
+            timer.Stop();
         }
 
         private void TimerControl_Tick(object sender, EventArgs e)
@@ -113,22 +221,40 @@ namespace App.Forms
             }
         }
 
-        private void GenerateButton_Click(object sender, EventArgs e)
+        private void EnableGrid()
         {
-            string selectedDifficulty = difficultyComboBox.SelectedItem.ToString();
+            foreach (Control ctrl in gridPanel.Controls)
+                if (ctrl is Button btn && btn.Tag != null)
+                    btn.Enabled = true;
+        }
 
-            int gridSize = selectedDifficulty switch
+        private void DisableGrid()
+        {
+            foreach (Control ctrl in gridPanel.Controls)
+                if (ctrl is Button btn && btn.Tag != null)
+                    btn.Enabled = false;
+        }
+
+        private Difficulty GetSelectedDifficulty()
+        {
+            return difficultyComboBox.SelectedItem?.ToString() switch
+            {
+                "Easy" => Difficulty.Easy,
+                "Medium" => Difficulty.Medium,
+                "Hard" => Difficulty.Hard,
+                _ => Difficulty.Easy
+            };
+        }
+
+        private int GetGridSize()
+        {
+            return difficultyComboBox.SelectedItem?.ToString() switch
             {
                 "Easy" => 5,
                 "Medium" => 7,
                 "Hard" => 10,
-                _ => 5
+                _ => settings.Preferences.GridSize
             };
-
-            settings.Preferences.GridSize = gridSize;
-            puzzle = new NonogramPuzzle(gridSize);
-            InitPuzzle();
-            timer.Restart();
         }
     }
 }

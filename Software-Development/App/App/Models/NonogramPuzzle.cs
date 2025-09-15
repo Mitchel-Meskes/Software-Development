@@ -1,85 +1,141 @@
-﻿using System.Text.Json;
-using System.Text.Json.Serialization;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Text.Json;
 
 namespace App.Models
 {
+    public enum Difficulty
+    {
+        Easy,
+        Medium,
+        Hard
+    }
+
     public class NonogramPuzzle
     {
-        public List<List<int>> Grid { get; set; }  // Gebruik een List van List voor betere serialisatie
+        public List<List<int>> Grid { get; set; }       // Player's grid
+        public List<List<int>> Solution { get; set; }   // Correct solution
         public int Size { get; set; }
+        public Difficulty Level { get; set; }
 
-        public NonogramPuzzle(int size)
+        private static Random rng = new Random();
+
+        public NonogramPuzzle(int size, Difficulty level)
         {
             Size = size;
+            Level = level;
+
             Grid = new List<List<int>>(size);
+            Solution = new List<List<int>>(size);
+
             for (int i = 0; i < size; i++)
             {
-                Grid.Add(new List<int>(new int[size])); // Vul met 0’en voor correcte lengte
+                Grid.Add(new List<int>(new int[size]));
+                Solution.Add(new List<int>(new int[size]));
+            }
+
+            GenerateSolution();
+        }
+
+        private void GenerateSolution()
+        {
+            switch (Level)
+            {
+                case Difficulty.Easy: GenerateEasy(); break;
+                case Difficulty.Medium: GenerateMedium(); break;
+                case Difficulty.Hard: GenerateHard(); break;
+            }
+
+            // Player grid starts empty
+            for (int r = 0; r < Size; r++)
+                for (int c = 0; c < Size; c++)
+                    Grid[r][c] = 0;
+        }
+
+        private void GenerateEasy()
+        {
+            for (int r = 0; r < Size; r++)
+            {
+                int filled = rng.Next(1, Size);
+                var indices = new HashSet<int>();
+                while (indices.Count < filled) indices.Add(rng.Next(Size));
+                for (int c = 0; c < Size; c++)
+                    Solution[r][c] = indices.Contains(c) ? 1 : 0;
             }
         }
 
-        // Serialisatie naar JSON
-        public string ToJson()
+        private void GenerateMedium()
         {
-            return JsonSerializer.Serialize(this, new JsonSerializerOptions
+            for (int r = 0; r < Size; r++)
+                for (int c = 0; c < Size; c++)
+                    Solution[r][c] = rng.NextDouble() < 0.5 ? 1 : 0;
+        }
+
+        private void GenerateHard()
+        {
+            for (int r = 0; r < Size; r++)
+                for (int c = 0; c < Size; c++)
+                    Solution[r][c] = rng.NextDouble() < 0.6 ? 1 : 0;
+        }
+
+        public List<string> GetRowCluesForDisplay()
+        {
+            var rowClues = new List<string>();
+            foreach (var row in Solution)
             {
-                WriteIndented = true // Optioneel, voor leesbaarheid
-            });
-        }
-
-        // Deserialisatie van JSON naar NonogramPuzzle
-        public static NonogramPuzzle FromJson(string json)
-        {
-            return JsonSerializer.Deserialize<NonogramPuzzle>(json);
-        }
-
-        // Genereren van geroteerde puzzel
-        public NonogramPuzzle GenerateRotated(int rotation)
-        {
-            var newGrid = new List<List<int>>(Size);
-            for (int i = 0; i < Size; i++)
-                newGrid.Add(new List<int>(new int[Size]));
-
-            for (int i = 0; i < Size; i++)
-                for (int j = 0; j < Size; j++)
-                    newGrid[i][j] = rotation switch
+                var clue = new List<int>();
+                int count = 0;
+                foreach (var cell in row)
+                {
+                    if (cell == 1) count++;
+                    else
                     {
-                        90 => Grid[Size - j - 1][i],
-                        180 => Grid[Size - i - 1][Size - j - 1],
-                        270 => Grid[j][Size - i - 1],
-                        _ => Grid[i][j]
-                    };
-
-            return new NonogramPuzzle(Size) { Grid = newGrid };
+                        if (count > 0) { clue.Add(count); count = 0; }
+                    }
+                }
+                if (count > 0) clue.Add(count);
+                rowClues.Add(clue.Count > 0 ? string.Join(" ", clue) : "0");
+            }
+            return rowClues;
         }
 
-        // Genereren van gespiegeld grid
-        public NonogramPuzzle GenerateMirrored(bool horizontal)
+        public List<string> GetColumnCluesForDisplay()
         {
-            var newGrid = new List<List<int>>(Size);
-            for (int i = 0; i < Size; i++)
-                newGrid.Add(new List<int>(new int[Size]));
-
-            for (int i = 0; i < Size; i++)
-                for (int j = 0; j < Size; j++)
-                    newGrid[i][j] = horizontal ? Grid[i][Size - j - 1] : Grid[Size - i - 1][j];
-
-            return new NonogramPuzzle(Size) { Grid = newGrid };
+            var colClues = new List<string>();
+            for (int c = 0; c < Size; c++)
+            {
+                var clue = new List<int>();
+                int count = 0;
+                for (int r = 0; r < Size; r++)
+                {
+                    if (Solution[r][c] == 1) count++;
+                    else
+                    {
+                        if (count > 0) { clue.Add(count); count = 0; }
+                    }
+                }
+                if (count > 0) clue.Add(count);
+                colClues.Add(clue.Count > 0 ? string.Join(" ", clue) : "0");
+            }
+            return colClues;
         }
 
         public bool IsSolved()
         {
-            foreach (var row in Grid)
-            {
-                foreach (var cell in row)
-                {
-                    if (cell == 0)
-                        return false; // Nog lege cel gevonden
-                }
-            }
+            for (int r = 0; r < Size; r++)
+                for (int c = 0; c < Size; c++)
+                    if (Grid[r][c] != Solution[r][c]) return false;
             return true;
         }
+
+        public void ShowSolution()
+        {
+            for (int r = 0; r < Size; r++)
+                for (int c = 0; c < Size; c++)
+                    Grid[r][c] = Solution[r][c];
+        }
+
+        public string ToJson() => JsonSerializer.Serialize(this, new JsonSerializerOptions { WriteIndented = true });
+        public static NonogramPuzzle FromJson(string json) => JsonSerializer.Deserialize<NonogramPuzzle>(json);
     }
 }
