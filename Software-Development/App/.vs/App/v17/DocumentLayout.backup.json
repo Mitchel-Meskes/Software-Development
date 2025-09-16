@@ -1,14 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Mitch\\OneDrive\\Bureaublad\\Software-Development\\Software-Development\\App\\",
+  "WorkspaceRootPath": "C:\\Users\\pmecm\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|c:\\users\\mitch\\onedrive\\bureaublad\\software-development\\software-development\\app\\app\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|solutionrelative:app\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|c:\\users\\pmecm\\source\\repos\\mitchel-meskes\\software-development\\software-development\\app\\app\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|solutionrelative:app\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|c:\\users\\mitch\\onedrive\\bureaublad\\software-development\\software-development\\app\\app\\utils\\testfilehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|solutionrelative:app\\utils\\testfilehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|c:\\users\\pmecm\\source\\repos\\mitchel-meskes\\software-development\\software-development\\app\\app\\forms\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|solutionrelative:app\\forms\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|c:\\users\\pmecm\\source\\repos\\mitchel-meskes\\software-development\\software-development\\app\\app\\forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|solutionrelative:app\\forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,40 +22,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Users\\Mitch\\OneDrive\\Bureaublad\\Software-Development\\Software-Development\\App\\App\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "App\\Services\\UserService.cs",
-              "ToolTip": "C:\\Users\\Mitch\\OneDrive\\Bureaublad\\Software-Development\\Software-Development\\App\\App\\Services\\UserService.cs",
-              "RelativeToolTip": "App\\Services\\UserService.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAADwv0QAAAAAAAAAAAAAAA==",
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "C:\\Users\\pmecm\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\Forms\\MainForm.cs",
+              "RelativeDocumentMoniker": "App\\Forms\\MainForm.cs",
+              "ToolTip": "C:\\Users\\pmecm\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\Forms\\MainForm.cs",
+              "RelativeToolTip": "App\\Forms\\MainForm.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAIwEIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T18:16:16.192Z",
+              "WhenOpened": "2025-09-16T16:39:11.558Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "TestFileHelper.cs",
-              "DocumentMoniker": "C:\\Users\\Mitch\\OneDrive\\Bureaublad\\Software-Development\\Software-Development\\App\\App\\Utils\\TestFileHelper.cs",
-              "RelativeDocumentMoniker": "App\\Utils\\TestFileHelper.cs",
-              "ToolTip": "C:\\Users\\Mitch\\OneDrive\\Bureaublad\\Software-Development\\Software-Development\\App\\App\\Utils\\TestFileHelper.cs",
-              "RelativeToolTip": "App\\Utils\\TestFileHelper.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAgwDkAAAAAAAAAAAAAAA==",
+              "Title": "MainForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\pmecm\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\Forms\\MainForm.Designer.cs",
+              "RelativeDocumentMoniker": "App\\Forms\\MainForm.Designer.cs",
+              "ToolTip": "C:\\Users\\pmecm\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\Forms\\MainForm.Designer.cs",
+              "RelativeToolTip": "App\\Forms\\MainForm.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T17:00:14.632Z"
+              "WhenOpened": "2025-09-16T16:39:07.338Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginForm.cs",
+              "DocumentMoniker": "C:\\Users\\pmecm\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\Forms\\LoginForm.cs",
+              "RelativeDocumentMoniker": "App\\Forms\\LoginForm.cs",
+              "ToolTip": "C:\\Users\\pmecm\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\Forms\\LoginForm.cs",
+              "RelativeToolTip": "App\\Forms\\LoginForm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T16:39:00.565Z",
+              "EditorCaption": ""
             }
           ]
         }
