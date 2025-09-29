@@ -12,18 +12,18 @@ namespace App.Forms
         {
             InitializeComponent();
 
-            // Automatisch schalen op DPI
+            
             this.AutoScaleMode = AutoScaleMode.Dpi;
-            // Form automatisch laten groeien/krimpen indien nodig
+            
             this.AutoSize = true;
             this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            // Startpositie in het midden van het scherm
+            
             this.StartPosition = FormStartPosition.CenterScreen;
-            // Minimale grootte instellen
-            this.MinimumSize = new Size(400, 300); // Pas aan naar wens
-            // Optioneel: standaardgrootte instellen
-            this.Size = new Size(500, 350); // Pas aan naar wens
-            // Optioneel: groter lettertype voor leesbaarheid
+           
+            this.MinimumSize = new Size(400, 300); 
+            
+            this.Size = new Size(500, 350); 
+            
             this.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
         }
 
@@ -53,7 +53,7 @@ namespace App.Forms
 
                 Logger.Info($"Login succesvol voor gebruiker: {username}");
 
-                // Optioneel: game stats tonen
+                
                 var gameStatsService = new GameStatsService();
                 var stats = gameStatsService.GetGameStatsByUsername(username);
                 if (stats != null)
@@ -101,7 +101,6 @@ namespace App.Forms
                 Logger.Info($"Nieuwe gebruiker geregistreerd: {username}");
                 MessageBox.Show("Registratie gelukt! Je kunt nu inloggen.", "Succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                // Optioneel: maak velden leeg en focus op username
                 txtUsername.Clear();
                 txtPassword.Clear();
                 txtUsername.Focus();

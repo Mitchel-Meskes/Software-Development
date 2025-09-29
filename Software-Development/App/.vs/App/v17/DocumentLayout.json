@@ -3,16 +3,76 @@
   "WorkspaceRootPath": "C:\\Users\\pmecm\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{EB391E74-E7F4-47A3-83C4-AFAC8C0B63C4}|App.Tests\\App.Tests.csproj|c:\\users\\pmecm\\source\\repos\\mitchel-meskes\\software-development\\software-development\\app\\app.tests\\app.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{EB391E74-E7F4-47A3-83C4-AFAC8C0B63C4}|App.Tests\\App.Tests.csproj|solutionrelative:app.tests\\app.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|c:\\users\\pmecm\\source\\repos\\mitchel-meskes\\software-development\\software-development\\app\\app\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|solutionrelative:app\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|c:\\users\\pmecm\\source\\repos\\mitchel-meskes\\software-development\\software-development\\app\\app\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|solutionrelative:app\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|c:\\users\\pmecm\\source\\repos\\mitchel-meskes\\software-development\\software-development\\app\\app\\services\\statisticsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|solutionrelative:app\\services\\statisticsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|c:\\users\\pmecm\\source\\repos\\mitchel-meskes\\software-development\\software-development\\app\\app\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|solutionrelative:app\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|c:\\users\\pmecm\\source\\repos\\mitchel-meskes\\software-development\\software-development\\app\\app\\forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|solutionrelative:app\\forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|c:\\users\\pmecm\\source\\repos\\mitchel-meskes\\software-development\\software-development\\app\\app\\forms\\loginform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|solutionrelative:app\\forms\\loginform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|c:\\users\\pmecm\\source\\repos\\mitchel-meskes\\software-development\\software-development\\app\\app\\forms\\loginform.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|solutionrelative:app\\forms\\loginform.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|c:\\users\\pmecm\\source\\repos\\mitchel-meskes\\software-development\\software-development\\app\\app\\forms\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|solutionrelative:app\\forms\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|c:\\users\\pmecm\\source\\repos\\mitchel-meskes\\software-development\\software-development\\app\\app\\forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|solutionrelative:app\\forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|c:\\users\\pmecm\\source\\repos\\mitchel-meskes\\software-development\\software-development\\app\\app\\forms\\mainform.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|solutionrelative:app\\forms\\mainform.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|c:\\users\\pmecm\\source\\repos\\mitchel-meskes\\software-development\\software-development\\app\\app\\models\\gamestats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|solutionrelative:app\\models\\gamestats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|c:\\users\\pmecm\\source\\repos\\mitchel-meskes\\software-development\\software-development\\app\\app\\models\\nonogrampuzzle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|solutionrelative:app\\models\\nonogrampuzzle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|c:\\users\\pmecm\\source\\repos\\mitchel-meskes\\software-development\\software-development\\app\\app\\models\\settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|solutionrelative:app\\models\\settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|c:\\users\\pmecm\\source\\repos\\mitchel-meskes\\software-development\\software-development\\app\\app\\services\\settingsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|solutionrelative:app\\services\\settingsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|c:\\users\\pmecm\\source\\repos\\mitchel-meskes\\software-development\\software-development\\app\\app\\services\\puzzlesolver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|solutionrelative:app\\services\\puzzlesolver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|c:\\users\\pmecm\\source\\repos\\mitchel-meskes\\software-development\\software-development\\app\\app\\services\\puzzlegenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|solutionrelative:app\\services\\puzzlegenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|c:\\users\\pmecm\\source\\repos\\mitchel-meskes\\software-development\\software-development\\app\\app\\services\\gamestatsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|solutionrelative:app\\services\\gamestatsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|c:\\users\\pmecm\\source\\repos\\mitchel-meskes\\software-development\\software-development\\app\\app\\services\\gamestateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94147C45-88A4-4118-9656-26E3F1DDB98D}|App\\App.csproj|solutionrelative:app\\services\\gamestateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,40 +99,233 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "App.Tests",
+              "DocumentMoniker": "C:\\Users\\pmecm\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App.Tests\\App.Tests.csproj",
+              "RelativeDocumentMoniker": "App.Tests\\App.Tests.csproj",
+              "ToolTip": "C:\\Users\\pmecm\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App.Tests\\App.Tests.csproj",
+              "RelativeToolTip": "App.Tests\\App.Tests.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-29T14:57:11.097Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LoginForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\pmecm\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\Forms\\LoginForm.Designer.cs",
+              "RelativeDocumentMoniker": "App\\Forms\\LoginForm.Designer.cs",
+              "ToolTip": "C:\\Users\\pmecm\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\Forms\\LoginForm.Designer.cs",
+              "RelativeToolTip": "App\\Forms\\LoginForm.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFAAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T14:35:06.194Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LoginForm.resx",
+              "DocumentMoniker": "C:\\Users\\pmecm\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\Forms\\LoginForm.resx",
+              "RelativeDocumentMoniker": "App\\Forms\\LoginForm.resx",
+              "ToolTip": "C:\\Users\\pmecm\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\Forms\\LoginForm.resx",
+              "RelativeToolTip": "App\\Forms\\LoginForm.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-09-29T14:35:04.445Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MainForm.resx",
+              "DocumentMoniker": "C:\\Users\\pmecm\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\Forms\\MainForm.resx",
+              "RelativeDocumentMoniker": "App\\Forms\\MainForm.resx",
+              "ToolTip": "C:\\Users\\pmecm\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\Forms\\MainForm.resx",
+              "RelativeToolTip": "App\\Forms\\MainForm.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-09-29T14:35:00.738Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "GameStats.cs",
+              "DocumentMoniker": "C:\\Users\\pmecm\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\Models\\GameStats.cs",
+              "RelativeDocumentMoniker": "App\\Models\\GameStats.cs",
+              "ToolTip": "C:\\Users\\pmecm\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\Models\\GameStats.cs",
+              "RelativeToolTip": "App\\Models\\GameStats.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T14:34:57.155Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "NonogramPuzzle.cs",
+              "DocumentMoniker": "C:\\Users\\pmecm\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\Models\\NonogramPuzzle.cs",
+              "RelativeDocumentMoniker": "App\\Models\\NonogramPuzzle.cs",
+              "ToolTip": "C:\\Users\\pmecm\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\Models\\NonogramPuzzle.cs",
+              "RelativeToolTip": "App\\Models\\NonogramPuzzle.cs",
+              "ViewState": "AgIAAKQAAAAAAAAAAAAAAKMAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T14:34:11.859Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Settings.cs",
+              "DocumentMoniker": "C:\\Users\\pmecm\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\Models\\Settings.cs",
+              "RelativeDocumentMoniker": "App\\Models\\Settings.cs",
+              "ToolTip": "C:\\Users\\pmecm\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\Models\\Settings.cs",
+              "RelativeToolTip": "App\\Models\\Settings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T14:34:10.777Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\pmecm\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\Models\\User.cs",
+              "RelativeDocumentMoniker": "App\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\pmecm\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\Models\\User.cs",
+              "RelativeToolTip": "App\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T14:33:56.628Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\pmecm\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "App\\Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\pmecm\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\Services\\UserService.cs",
+              "RelativeToolTip": "App\\Services\\UserService.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAowAgAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T14:33:51.104Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "StatisticsService.cs",
+              "DocumentMoniker": "C:\\Users\\pmecm\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\Services\\StatisticsService.cs",
+              "RelativeDocumentMoniker": "App\\Services\\StatisticsService.cs",
+              "ToolTip": "C:\\Users\\pmecm\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\Services\\StatisticsService.cs",
+              "RelativeToolTip": "App\\Services\\StatisticsService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T14:33:31.712Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LoginForm.cs",
+              "DocumentMoniker": "C:\\Users\\pmecm\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\Forms\\LoginForm.cs",
+              "RelativeDocumentMoniker": "App\\Forms\\LoginForm.cs",
+              "ToolTip": "C:\\Users\\pmecm\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\Forms\\LoginForm.cs",
+              "RelativeToolTip": "App\\Forms\\LoginForm.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAowDcAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T16:39:00.565Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "MainForm.cs",
               "DocumentMoniker": "C:\\Users\\pmecm\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\Forms\\MainForm.cs",
               "RelativeDocumentMoniker": "App\\Forms\\MainForm.cs",
               "ToolTip": "C:\\Users\\pmecm\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\Forms\\MainForm.cs",
               "RelativeToolTip": "App\\Forms\\MainForm.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAIwEIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAALgBAAAAAAAAAAAqwDkBAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-16T16:39:11.558Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 13,
+              "Title": "SettingsManager.cs",
+              "DocumentMoniker": "C:\\Users\\pmecm\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\Services\\SettingsManager.cs",
+              "RelativeDocumentMoniker": "App\\Services\\SettingsManager.cs",
+              "ToolTip": "C:\\Users\\pmecm\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\Services\\SettingsManager.cs",
+              "RelativeToolTip": "App\\Services\\SettingsManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T14:33:29.801Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "PuzzleSolver.cs",
+              "DocumentMoniker": "C:\\Users\\pmecm\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\Services\\PuzzleSolver.cs",
+              "RelativeDocumentMoniker": "App\\Services\\PuzzleSolver.cs",
+              "ToolTip": "C:\\Users\\pmecm\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\Services\\PuzzleSolver.cs",
+              "RelativeToolTip": "App\\Services\\PuzzleSolver.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAmwCsAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T14:33:17.248Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "PuzzleGenerator.cs",
+              "DocumentMoniker": "C:\\Users\\pmecm\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\Services\\PuzzleGenerator.cs",
+              "RelativeDocumentMoniker": "App\\Services\\PuzzleGenerator.cs",
+              "ToolTip": "C:\\Users\\pmecm\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\Services\\PuzzleGenerator.cs",
+              "RelativeToolTip": "App\\Services\\PuzzleGenerator.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwB0AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T14:33:02.833Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "MainForm.Designer.cs",
               "DocumentMoniker": "C:\\Users\\pmecm\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\Forms\\MainForm.Designer.cs",
               "RelativeDocumentMoniker": "App\\Forms\\MainForm.Designer.cs",
               "ToolTip": "C:\\Users\\pmecm\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\Forms\\MainForm.Designer.cs",
               "RelativeToolTip": "App\\Forms\\MainForm.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-16T16:39:07.338Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LoginForm.cs",
-              "DocumentMoniker": "C:\\Users\\pmecm\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\Forms\\LoginForm.cs",
-              "RelativeDocumentMoniker": "App\\Forms\\LoginForm.cs",
-              "ToolTip": "C:\\Users\\pmecm\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\Forms\\LoginForm.cs",
-              "RelativeToolTip": "App\\Forms\\LoginForm.cs",
+              "DocumentIndex": 16,
+              "Title": "GameStatsService.cs",
+              "DocumentMoniker": "C:\\Users\\pmecm\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\Services\\GameStatsService.cs",
+              "RelativeDocumentMoniker": "App\\Services\\GameStatsService.cs",
+              "ToolTip": "C:\\Users\\pmecm\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\Services\\GameStatsService.cs",
+              "RelativeToolTip": "App\\Services\\GameStatsService.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T14:33:01.17Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "GameStateService.cs",
+              "DocumentMoniker": "C:\\Users\\pmecm\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\Services\\GameStateService.cs",
+              "RelativeDocumentMoniker": "App\\Services\\GameStateService.cs",
+              "ToolTip": "C:\\Users\\pmecm\\source\\repos\\Mitchel-Meskes\\Software-Development\\Software-Development\\App\\App\\Services\\GameStateService.cs",
+              "RelativeToolTip": "App\\Services\\GameStateService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T16:39:00.565Z",
+              "WhenOpened": "2025-09-29T14:32:59.72Z",
               "EditorCaption": ""
             }
           ]

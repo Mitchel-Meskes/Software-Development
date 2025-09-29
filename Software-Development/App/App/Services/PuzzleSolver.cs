@@ -17,12 +17,12 @@ namespace App.Services
         {
             int size = puzzle.Size;
 
-            // Work on a copy so we can backtrack
+            
             int[][] grid = puzzle.Grid.Select(row => row.ToArray()).ToArray();
 
             if (SolveCell(puzzle, grid, 0, 0))
             {
-                // Copy solution into puzzle.Grid
+               
                 for (int r = 0; r < size; r++)
                     for (int c = 0; c < size; c++)
                         puzzle.Grid[r][c] = grid[r][c];
@@ -41,7 +41,7 @@ namespace App.Services
             int nextR = c == size - 1 ? r + 1 : r;
             int nextC = c == size - 1 ? 0 : c + 1;
 
-            // Try both filled (1) and empty (0)
+            
             foreach (int val in new[] { 0, 1 })
             {
                 grid[r][c] = val;

@@ -14,8 +14,8 @@ namespace App.Models
 
     public class NonogramPuzzle
     {
-        public List<List<int>> Grid { get; set; }       // Player's grid (0 = empty, 1 = filled)
-        public List<List<int>> Solution { get; set; }   // Correct solution (0/1)
+        public List<List<int>> Grid { get; set; }       
+        public List<List<int>> Solution { get; set; }   
         public int Size { get; set; }
         public Difficulty Level { get; set; }
 
@@ -31,7 +31,7 @@ namespace App.Models
 
             for (int i = 0; i < size; i++)
             {
-                // initialize with zeros
+                
                 Grid.Add(new List<int>(new int[size]));
                 Solution.Add(new List<int>(new int[size]));
             }
@@ -48,7 +48,7 @@ namespace App.Models
                 case Difficulty.Hard: GenerateHard(); break;
             }
 
-            // Player grid starts empty (ensure zeros)
+            
             for (int r = 0; r < Size; r++)
                 for (int c = 0; c < Size; c++)
                     Grid[r][c] = 0;
@@ -58,7 +58,7 @@ namespace App.Models
         {
             for (int r = 0; r < Size; r++)
             {
-                int filled = rng.Next(1, Math.Max(2, Size)); // at least 1
+                int filled = rng.Next(1, Math.Max(2, Size)); 
                 var indices = new HashSet<int>();
                 while (indices.Count < filled) indices.Add(rng.Next(Size));
                 for (int c = 0; c < Size; c++)
@@ -80,11 +80,6 @@ namespace App.Models
                     Solution[r][c] = rng.NextDouble() < 0.6 ? 1 : 0;
         }
 
-        // -----------------------
-        // Clue generation methods
-        // -----------------------
-
-        // returns list of clues for every row (each inner list are runs in that row)
         public List<List<int>> GetRowClues()
         {
             var result = new List<List<int>>(Size);
@@ -93,7 +88,7 @@ namespace App.Models
             return result;
         }
 
-        // returns clues for a single row (no "0" sentinel — returns empty list if no runs)
+       
         public List<int> GetRowClues(int rowIndex)
         {
             var clue = new List<int>();
@@ -111,10 +106,9 @@ namespace App.Models
                 }
             }
             if (count > 0) clue.Add(count);
-            return clue; // may be empty
+            return clue; 
         }
 
-        // returns list of clues for every column (each inner list are runs in that column)
         public List<List<int>> GetColumnClues()
         {
             var result = new List<List<int>>(Size);
@@ -123,7 +117,7 @@ namespace App.Models
             return result;
         }
 
-        // returns clues for a single column
+        
         public List<int> GetColClues(int colIndex)
         {
             var clue = new List<int>();
@@ -144,11 +138,7 @@ namespace App.Models
             return clue; // may be empty
         }
 
-        // -----------------------
-        // Display helpers (strings)
-        // -----------------------
-
-        // returns display-friendly strings ("0" if empty) — used by UI if you want a visible 0
+        
         public List<string> GetRowCluesForDisplay()
         {
             var rowClues = new List<string>(Size);
@@ -171,9 +161,7 @@ namespace App.Models
             return colClues;
         }
 
-        // -----------------------
-        // Other helpers
-        // -----------------------
+       
 
         public bool IsSolved()
         {
