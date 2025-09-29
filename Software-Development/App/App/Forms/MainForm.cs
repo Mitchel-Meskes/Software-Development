@@ -14,7 +14,7 @@ namespace App.Forms
         private Random random = new Random();
         private bool gameActive = false;
 
-        // Controls
+       
         private TableLayoutPanel gridPanel;
         private TableLayoutPanel rowHintsPanel;
         private TableLayoutPanel colHintsPanel;
@@ -51,17 +51,16 @@ namespace App.Forms
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            // Stop de timer
+            
             timerControl?.Stop();
 
-            // Stop de stopwatch
+            
             if (stopwatch != null && stopwatch.IsRunning)
                 stopwatch.Stop();
 
-            // Disable grid buttons
             EnableGrid(false);
 
-            // Sluit de applicatie volledig af
+            
             Application.Exit();
         }
 
@@ -70,7 +69,7 @@ namespace App.Forms
             timerControl = new System.Windows.Forms.Timer { Interval = 1000 };
             timerControl.Tick += TimerControl_Tick;
 
-            // Grid panel
+            
             gridPanel = new TableLayoutPanel
             {
                 Location = new Point(200, 100),
@@ -78,7 +77,7 @@ namespace App.Forms
                 CellBorderStyle = TableLayoutPanelCellBorderStyle.Single
             };
 
-            // Hints panels
+          
             rowHintsPanel = new TableLayoutPanel
             {
                 Location = new Point(140, 100),
@@ -90,14 +89,14 @@ namespace App.Forms
                 Size = new Size(500, 60)
             };
 
-            // Right panel
+          
             rightPanel = new Panel
             {
                 Location = new Point(720, 100),
                 Size = new Size(150, 500)
             };
 
-            // Right panel controls
+           
             startButton = new Button { Text = "Start", Dock = DockStyle.Top, Height = 40 };
             pauseButton = new Button { Text = "Pause", Dock = DockStyle.Top, Height = 40, Enabled = false };
             resetButton = new Button { Text = "Reset", Dock = DockStyle.Top, Height = 40, Enabled = false };
@@ -120,7 +119,7 @@ namespace App.Forms
             rightPanel.Controls.Add(pauseButton);
             rightPanel.Controls.Add(startButton);
 
-            // Generate and difficulty controls
+            
             generateButton = new Button { Text = "Generate Puzzle", Location = new Point(20, 620), Size = new Size(160, 50) };
             difficultyComboBox = new ComboBox
             {
@@ -131,7 +130,7 @@ namespace App.Forms
             difficultyComboBox.Items.AddRange(new string[] { "Easy", "Medium", "Hard" });
             difficultyComboBox.SelectedIndex = 0;
 
-            // Hint button
+           
             hintButton = new Button
             {
                 Text = "Hint",
@@ -148,7 +147,7 @@ namespace App.Forms
             Controls.Add(difficultyComboBox);
             Controls.Add(hintButton);
 
-            // Event handlers
+            
             startButton.Click += StartButton_Click;
             pauseButton.Click += PauseButton_Click;
             resetButton.Click += ResetButton_Click;
@@ -174,7 +173,7 @@ namespace App.Forms
 
         private void BuildGrid()
         {
-            // Clear old controls/styles
+            
             gridPanel.Controls.Clear();
             gridPanel.ColumnStyles.Clear();
             gridPanel.RowStyles.Clear();
@@ -187,7 +186,7 @@ namespace App.Forms
 
             int size = puzzle.Size;
 
-            // Grid layout
+            
             gridPanel.ColumnCount = size;
             gridPanel.RowCount = size;
             for (int i = 0; i < size; i++)
@@ -215,7 +214,6 @@ namespace App.Forms
             }
             gridPanel.ResumeLayout();
 
-            // Make hint panels sized relative to grid (keurt flexibelere layout)
             int rowHintWidth = Math.Max(60, gridPanel.Width / 8);
             int colHintHeight = Math.Max(40, gridPanel.Height / 8);
             rowHintsPanel.Size = new Size(rowHintWidth, gridPanel.Height);
@@ -238,7 +236,6 @@ namespace App.Forms
                     Text = string.Join(" ", allRowClues[r]),
                     AutoSize = false,
                     Padding = new Padding(0, 0, 6, 0)
-                    // **NO Visible = false** here — labels standaard zichtbaar
                 };
                 rowHintsPanel.Controls.Add(lbl, 0, r);
             }
@@ -261,13 +258,13 @@ namespace App.Forms
                     Text = string.Join(Environment.NewLine, allColClues[c]),
                     AutoSize = false,
                     Margin = new Padding(0)
-                    // **NO Visible = false** hier ook
+                    
                 };
                 colHintsPanel.Controls.Add(lbl, c, 0);
             }
             colHintsPanel.ResumeLayout();
 
-            // Position hint panels relative to the grid so they stay in the right place
+           
             rowHintsPanel.Location = new Point(gridPanel.Left - rowHintsPanel.Width - 5, gridPanel.Top);
             colHintsPanel.Location = new Point(gridPanel.Left, gridPanel.Top - colHintsPanel.Height - 5);
         }
@@ -314,7 +311,7 @@ namespace App.Forms
             hintButton.Enabled = true;
             solveButton.Enabled = true;
 
-            startButton.Enabled = false; // <-- Start-knop direct disabled
+            startButton.Enabled = false; 
         }
 
 
@@ -361,7 +358,7 @@ namespace App.Forms
             EnableGrid(false);
             ToggleHints(false);
 
-            startButton.Enabled = true;   // <-- Start-knop opnieuw beschikbaar
+            startButton.Enabled = true;   
             pauseButton.Enabled = false;
             resetButton.Enabled = false;
             submitButton.Enabled = false;
@@ -450,7 +447,7 @@ namespace App.Forms
             stopwatch.Stop();
             timerControl.Stop();
             solveConfirmed = false;
-            MessageBox.Show("You pressed Solve Puzzle — you lost!");
+            MessageBox.Show("You pressed Solve Puzzle - You lost!");
         }
 
         private void EnableGrid(bool enabled)

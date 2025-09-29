@@ -24,7 +24,6 @@ namespace App.Forms
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
 
-            // Declare controls (no logic)
             this.gridPanel = new TableLayoutPanel();
             this.rowHintsPanel = new TableLayoutPanel();
             this.colHintsPanel = new TableLayoutPanel();
